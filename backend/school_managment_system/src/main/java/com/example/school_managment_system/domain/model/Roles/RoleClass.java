@@ -3,17 +3,21 @@ import java.security.Permission;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.example.school_managment_system.domain.model.permiso.Permiso;
+import com.example.school_managment_system.domain.model.Permisos.Permiso;
 
 
-public abstract class  Roles {
+public abstract class  RoleClass {
    protected String NombreRole;
    protected List<Permiso> permisos = new ArrayList<>();
 
-   public Roles (String NombreRole) {
+   public RoleClass (String NombreRole) {
       this.NombreRole = NombreRole; 
    }
    
+   public abstract String hacerTarea();
+
+   
+
    // Método para asignar permisos al rol
     public abstract void assignPermissions();
 
